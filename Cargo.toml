@@ -1,0 +1,19 @@
+[package]
+name = "sorcerer-td-bot"
+version = "0.1.0"
+edition = "2021"
+description = "Parses Sorcerer TD trading-channel messages and recomputes unit values from recent trades"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+dotenvy = "0.15.7"
+libsql = { version = "0.10.0", features = ["remote"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "gzip"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "fs"] }
+serenity = "0.12"
+
+[profile.release]
+opt-level = 2
