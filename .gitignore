@@ -1,0 +1,8 @@
+# Binary target
+target/
+
+# Dotenv (local overrides)
+.env
+
+# Units JSON (live API snapshot, generated)
+units.json
